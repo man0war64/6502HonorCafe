@@ -23,13 +23,40 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
-    color: white;
+    background-color: #ADD8E6;
+    position: relative;
+    color: #000;
     padding: 40px 30px;
     text-align: center;
 }
 
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.3) 0%, rgba(135, 206, 235, 0.3) 100%);
+    z-index: 1;
+}
+
+.header-image {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 header h1 {
+    position: relative;
+    z-index: 2;
     font-size: 2.5em;
     font-weight: 300;
     letter-spacing: 2px;
@@ -49,7 +76,7 @@ section:last-of-type {
 }
 
 h2 {
-    color: #8B4513;
+    color: #000;
     font-size: 1.5em;
     margin-bottom: 15px;
     font-weight: 400;
@@ -61,7 +88,7 @@ h2 {
     background: #f9f9f9;
     padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid #8B4513;
+    border-left: 4px solid #ADD8E6;
     font-size: 1.1em;
 }
 
@@ -86,22 +113,17 @@ h2 {
     padding: 12px 0;
     padding-left: 30px;
     position: relative;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.instructions li:last-child {
-    border-bottom: none;
 }
 
 .instructions li::before {
-    content: "☕";
+    content: "•";
     position: absolute;
     left: 0;
     font-size: 1.2em;
 }
 
 .instructions a {
-    color: #8B4513;
+    color: #000;
     text-decoration: none;
     font-weight: 500;
 }
@@ -114,11 +136,11 @@ h2 {
     background: #f9f9f9;
     padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid #8B4513;
+    border-left: 4px solid #ADD8E6;
 }
 
 .contact a {
-    color: #8B4513;
+    color: #000;
     text-decoration: none;
     font-weight: 500;
 }
@@ -130,14 +152,14 @@ h2 {
 footer {
     text-align: center;
     padding: 30px;
-    background: #f9f9f9;
+    background: white;
     border-top: 2px solid #f0f0f0;
     font-style: italic;
-    color: #666;
+    color: #000;
 }
 
 strong {
-    color: #8B4513;
+    color: #000;
     font-weight: 600;
 }
 
